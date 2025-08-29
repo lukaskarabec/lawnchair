@@ -73,5 +73,11 @@
                 android:value="${packageName}.grid_control" />
         </activity>
 
+        <!-- Simple chat interface for interacting with Gemini -->
+        <activity
+            android:name="app.lawnchair.gemini.GeminiChatActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
     </application>
 </manifest>
