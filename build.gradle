@@ -270,7 +270,7 @@ android {
         }
 
         play {
-            applicationId "cz.appkazdarma.aiasistent.play"
+            applicationId "cz.appkazdarma.aiasistent"
             dimension "channel"
         }
 
