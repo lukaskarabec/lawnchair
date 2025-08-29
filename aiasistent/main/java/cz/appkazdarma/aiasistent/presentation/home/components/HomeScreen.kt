@@ -60,7 +60,7 @@ fun HomeScreen(
     val context = LocalContext.current
 
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
-        viewModel.updateContents()
+        viewModel.updateContents(context)
     }
 
     LaunchedEffect(viewModel) {
@@ -79,7 +79,7 @@ fun HomeScreen(
                         SnackbarResult.Dismissed -> Unit
                         SnackbarResult.ActionPerformed -> {
                             viewModel.resetLastUpdate()
-                            viewModel.updateContents()
+                            viewModel.updateContents(context)
                         }
                     }
                 }

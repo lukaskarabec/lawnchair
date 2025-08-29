@@ -1,6 +1,7 @@
 package cz.appkazdarma.aiasistent.presentation.home
 
 import android.content.Context
+import android.content.Intent
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -64,7 +65,7 @@ class HomeViewModel @Inject constructor(
     private val _eventFlow = MutableSharedFlow<HomeUIEvent>()
     val eventFlow = _eventFlow
 
-    fun updateContents() {
+    fun updateContents(context: Context) {
         val currentTime = System.currentTimeMillis()
         val timeSinceLastUpdate = currentTime - lastUpdate
 
@@ -75,7 +76,7 @@ class HomeViewModel @Inject constructor(
 
             viewModelScope.launch(Dispatchers.IO) {
                 updateWeatherWidget()
-                updateGeminiResponse()
+                updateGeminiResponse(context)
             }
         }
     }
@@ -108,18 +109,28 @@ class HomeViewModel @Inject constructor(
         return getApp(packageName, StringType.APP_PACKAGE_NAME)
     }
 
-    private suspend fun updateGeminiResponse() {
+    private suspend fun updateGeminiResponse(context: Context) {
         geminiJob?.cancel()
         _geminiState.value = Resource.Loading()
 
         val (prompt, history) = getGeminiPrompt()
 
-        // can be improved
         geminiJob = getGeminiResponse(prompt, history)
             .onEach { result ->
                 _geminiState.value = when (result) {
-                    is Resource.Success -> Resource.Success(result.data as GeminiItem)
+                    is Resource.Success -> {
+                        val item = result.data as GeminiItem
+                        // save the latest response for the widget and request widget update
+                        context.getSharedPreferences("widget_prefs", Context.MODE_PRIVATE)
+                            .edit()
+                            .putString("spotlight_content", item.response)
+                            .apply()
+                        context.sendBroadcast(Intent("cz.appkazdarma.aiasistent.ACTION_UPDATE_WIDGET"))
+                        Resource.Success(item)
+                    }
+
                     is Resource.Loading -> Resource.Loading(result.data)
+
                     is Resource.Error -> {
                         result.message?.let { message ->
                             _eventFlow.emit(HomeUIEvent.ShowSnackbar(message))
