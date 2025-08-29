@@ -143,7 +143,7 @@ final def quickstepMaxSdk = "35"
 android {
     namespace "com.android.launcher3"
     defaultConfig {
-        // Lawnchair Launcher 15.0 Beta 1
+        // AI Asistent 15.0 Beta 1
         // See CONTRIBUTING.md#versioning-scheme
         versionCode 15_00_02_01
         versionName "${versionDisplayName}"
@@ -161,7 +161,7 @@ android {
     applicationVariants.configureEach { variant ->
         variant.outputs.configureEach {
             def channel = variant.productFlavors.last().name
-            outputFileName = "Lawnchair.${variant.versionName}.$channel.${variant.buildType.name}.apk"
+            outputFileName = "AIAsistent.${variant.versionName}.$channel.${variant.buildType.name}.apk"
         }
     }
 
@@ -232,11 +232,11 @@ android {
 
         debug {
             applicationIdSuffix ".debug"
-            resValue("string", "derived_app_name", "Lawnchair (Debug)")
+            resValue("string", "derived_app_name", "AI Asistent (Debug)")
         }
 
         release {
-            resValue("string", "derived_app_name", "Lawnchair")
+            resValue("string", "derived_app_name", "AI Asistent")
             minifyEnabled true
             shrinkResources true
             proguardFiles proguardFilesFromAosp + "proguard.pro"
@@ -266,17 +266,17 @@ android {
         }
 
         github {
-            applicationId 'app.lawnchair'
+            applicationId 'cz.appkazdarma.aiasistent'
             dimension "channel"
         }
 
         nightly {
-            applicationId 'app.lawnchair.nightly'
+            applicationId 'cz.appkazdarma.aiasistent.nightly'
             dimension "channel"
         }
 
         play {
-            applicationId "app.lawnchair.play"
+            applicationId "cz.appkazdarma.aiasistent.play"
             dimension "channel"
             isDefault true
         }
