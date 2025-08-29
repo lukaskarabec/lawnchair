@@ -18,7 +18,7 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.android.wm.shell.flicker.bubble">
 
-    <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="29"/>
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="36"/>
     <!-- Read and write traces from external storage -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

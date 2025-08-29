@@ -21,7 +21,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-sdk android:targetSdkVersion="29" android:minSdkVersion="25"/>
+    <uses-sdk android:targetSdkVersion="36" android:minSdkVersion="23"/>
 
     <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO" />
 
