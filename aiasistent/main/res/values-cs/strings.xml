@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AI asistent</string>
+    <string name="changelog_content">Žádný seznam změn není k dispozici.</string>
+    <string name="add">Přidat</string>
+    <string name="appwidget_text">AI asistent</string>
+    <string name="configure">Nastavit</string>
+    <string name="add_widget">Přidat widget</string>
+    <string name="title">Název</string>
+    <string name="priority">Priorita</string>
+    <string name="edit">Upravit</string>
+    <string name="delete">Smazat</string>
+    <string name="nadpisnastaveni">Nastavení</string>
+    <string name="app_widget_description">Widget AI asistenta</string>
+    <string name="save">Uložit</string>
+    <string name="cancel">Zrušit</string>
+    <string name="edit_event">Upravit událost</string>
+    <string name="new_event">Nová událost</string>
+    <string name="description">Popis</string>
+    <string name="generuji_odpov">Generuji odpověď...</string>
+    <string name="listening_indicator">Naslouchám...</string>
+    <string name="speaking_indicator">Mluvím...</string>
+    <string name="select_custom_wallpaper">Vybrat vlastní tapetu</string>
+    <string name="edit_display">Upravit obrazovku</string>
+    <string name="show_network_speed">Zobrazit rychlost sítě</string>
+    <string name="network_usage_today">Network usage today: Mobile %1$s • Wi-Fi %2$s</string>
+    <string name="show_screen_time">Zobrazit čas strávený na obrazovce</string>
+    <string name="detailed_mode">Podrobný režim</string>
+    <string name="screen_time_today">Screen time today: %1$s</string>
+    <string name="content">Obsah</string>
+    <string name="edit_note">Upravit poznámku</string>
+    <string name="new_note">Nová poznámka</string>
+    <string name="new_task">Nový úkol</string>
+    <string name="edit_task">Upravit úkol</string>
+    <string name="changelog">Seznam změn</string>
+    <string name="favorites">Oblíbené</string>
+    <string name="history">Historie</string>
+    <string name="spotlight">Spotlight</string>
+    <string name="retry">Zkusit znovu</string>
+    <string name="no_favorites_message">Žádné oblíbené. Dlouhým stiskem na aplikaci ji přidáte</string>
+    <string name="error">Chyba</string>
+    <string name="generating">Generuji...</string>
+    <string name="new_tab">Nová záložka</string>
+    <string name="incognito_tab">Anonymní záložka</string>
+    <string name="clear_data">Smazat data</string>
+    <string name="open">Otevřít</string>
+    <string name="tab_number">Záložka %1$d</string>
+    <string name="ask_gemini_placeholder">Zeptejte se Gemini...</string>
+    <string name="search_apps_placeholder">Hledat aplikace...</string>
+    <string name="restart_app_to_complete_onboarding">Restartujte prosím aplikaci pro dokončení úvodního nastavení</string>
+    <string name="feature_placeholder_message">%1$s již brzy</string>
+    <string name="default_feature_name">Funkce</string>
+    <string name="help_screen_message">Toto je obrazovka nápovědy</string>
+    <string name="no_title">(Bez názvu)</string>
+    <string name="error_generic">Chyba :(</string>
+    <string name="loading">Načítám...</string>
+    <string name="default_prompt">Poskytněte krátkou aktualizaci ve třech větách na základě kontextu.Upřednostňujte nejnovější a důležité informace pro domovskou obrazovku, shrnujte klíčové konverzace a aktualizace a vyhýbáte se světským detailům.Přizpůsobte aktualizaci denní doby: shrněte večer a navrhněte zítřejší aktivity;Ráno doporučuji relevantní akce.
+Pokud není co nahlásit, sdílejte zajímavá fakta nebo relevantní informace.Vyvarujte se zmiňování času, data a aktuálního počasí (předpověď je v pořádku).Neptejte se na sledování.Použijte nastavení osobnosti.</string>
+    <string name="system_prompt">Jste lidský, minimalistický osobní asistent v rámci odpalovacího zařízení pro Android, který má snížit tření při používání telefonu a podporovat zdravější návyky.Poskytněte jasné a stručné informace založené na kontextu.Používejte prostý text bez formátování.Upřednostňujte nejdůležitější a nejaktuálnější informace za předpokladu, že uživatel již viděl starší oznámení.
+
+Zaměřte se na soudržnost a relevanci, vyhýbat se zbytečnému opakování nebo nejistým nárokům.Vaším cílem je minimalizovat rozptýlení, zejména z oznámení nebo aplikací.Použijte nastavení osobnosti.
+
+Formát odpovědi (separátor: "-end-"):
+Text-end-App1, App2, App3
+
+Navrhněte až 3 relevantní nainstalované aplikace nebo žádné, ne -li vhodné.Vyvarujte se doporučení irelevantní nebo potenciálně rušivých aplikací.</string>
+</resources>

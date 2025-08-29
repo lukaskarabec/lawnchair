@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">AI Assistant</string>
+    <string name="changelog_content">No changelog available.</string>
+    <string name="add">Add</string>
+    <string name="appwidget_text">AI Assistant</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add Widget</string>
+    <string name="title">Title</string>
+    <string name="priority">Priority</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="nadpisnastaveni">Settings</string>
+    <string name="app_widget_description">AI Assistant widget</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit_event">Edit event</string>
+    <string name="new_event">New event</string>
+    <string name="description">Description</string>
+    <string name="generuji_odpov">Generating response...</string>
+    <string name="listening_indicator">Listening...</string>
+    <string name="speaking_indicator">Speaking...</string>
+    <string name="select_custom_wallpaper">Select custom wallpaper</string>
+    <string name="edit_display">Edit display</string>
+    <string name="show_network_speed">Show network speed</string>
+    <string name="network_usage_today">Network usage today: Mobile %1$s • Wi-Fi %2$s</string>
+    <string name="show_screen_time">Show screen time</string>
+    <string name="detailed_mode">Detailed mode</string>
+    <string name="screen_time_today">Screen time today: %1$s</string>
+    <string name="content">Content</string>
+    <string name="edit_note">Edit note</string>
+    <string name="new_note">New note</string>
+    <string name="new_task">New task</string>
+    <string name="edit_task">Edit task</string>
+    <string name="changelog">Changelog</string>
+    <string name="favorites">Favorites</string>
+    <string name="history">History</string>
+    <string name="spotlight">Spotlight</string>
+    <string name="retry">Retry</string>
+    <string name="no_favorites_message">No favorites. Long press on an app to add it</string>
+    <string name="error">Error</string>
+    <string name="generating">Generating...</string>
+    <string name="new_tab">New tab</string>
+    <string name="incognito_tab">Incognito tab</string>
+    <string name="clear_data">Clear data</string>
+    <string name="open">Open</string>
+    <string name="tab_number">Tab %1$d</string>
+    <string name="ask_gemini_placeholder">Ask Gemini...</string>
+    <string name="search_apps_placeholder">Search Apps...</string>
+    <string name="restart_app_to_complete_onboarding">Please restart the app to complete onboarding</string>
+    <string name="feature_placeholder_message">%1$s coming soon</string>
+    <string name="default_feature_name">Feature</string>
+    <string name="help_screen_message">This is the Help Screen</string>
+    <string name="no_title">(No title)</string>
+    <string name="error_generic">Error :(</string>
+    <string name="loading">Loading...</string>
+    <string name="system_prompt">You are a human, minimalist personal assistant within an Android launcher designed to reduce friction when using the phone and to support healthier habits. Provide clear, concise information based on context. Use plain text without formatting. Prioritize the most important and up-to-date information, assuming the user has already seen older notifications.  Focus on cohesion and relevance, avoiding unnecessary repetition or uncertain claims. Your goal is to minimize distractions, especially from notifications or apps. Use your personality settings.  RESPONSE FORMAT (separator: \"-END-\"): response text-END-App1,App2,App3  Suggest up to 3 relevant installed apps, or none if not appropriate. Avoid recommending irrelevant or potentially distracting apps.</string>
+
+
+    <string name="default_prompt">Provide a brief update in three sentences based on context. Prioritize recent and important information for the home screen, summarizing key conversations and updates while avoiding mundane details. Tailor the update to the time of day: summarize in the evening and suggest tomorrow\'s activities; in the morning recommend relevant actions. If there\'s nothing to report, share interesting facts or relevant information. Avoid mentioning time, date, and current weather (forecast is fine). Do not ask follow-up questions. Use your personality settings.</string>
+
+</resources>

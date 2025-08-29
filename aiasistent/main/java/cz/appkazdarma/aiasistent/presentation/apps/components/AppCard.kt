@@ -1,0 +1,84 @@
+package cz.appkazdarma.aiasistent.presentation.apps.components
+
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.core.graphics.drawable.toBitmap
+import cz.appkazdarma.aiasistent.domain.model.CompactAppInfo
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+fun AppCard(
+    modifier: Modifier = Modifier,
+    appInfo: CompactAppInfo,
+    onClick: () -> Unit = {},
+    onLongClick: () -> Unit = {},
+    animate: Boolean = false
+) {
+    val animatedVisibility = remember { Animatable(initialValue = 0f) } // hodnota určující průhlednost karty
+
+    LaunchedEffect(key1 = animate) {
+        if (animate) {
+            animatedVisibility.animateTo(
+                targetValue = 1f, // finální hodnota průhlednosti
+                animationSpec = tween(durationMillis = 300) // délka animace
+            )
+        }
+    }
+
+    Box(
+        modifier = modifier.alpha(animatedVisibility.value) // aplikace průhlednosti na kořenový Box
+    ) {
+        Box(
+            modifier = modifier
+                .fillMaxWidth() // karta zabere celou šířku rodiče
+                .aspectRatio(1f) // zachování čtvercového tvaru
+                .clip(RoundedCornerShape(12.dp)) // zaoblení rohů
+                .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.5f)) // poloprůhledné pozadí
+                .combinedClickable(onClick = onClick, onLongClick = onLongClick) // reakce na klik i dlouhý stisk
+
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(8.dp), // vnitřní odsazení
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                Image(
+                    bitmap = appInfo.icon.toBitmap().asImageBitmap(), // zobrazení ikony aplikace
+                    contentDescription = appInfo.label,
+                    modifier = Modifier.size(80.dp)
+                )
+                Spacer(modifier = Modifier.height(24.dp))
+                Text(text = appInfo.label, style = MaterialTheme.typography.labelLarge, textAlign = TextAlign.Center) // název aplikace
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permission required for Google AI Core (Gemini Nano) -->
+    <uses-permission android:name="com.google.android.permission.AI_CORE" tools:ignore="MissingPermission" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <meta-data
+        android:name="google_analytics_default_allow_analytics_storage"
+        android:value="true" />
+    <meta-data
+        android:name="google_analytics_default_allow_ad_storage"
+        android:value="true" />
+    <meta-data
+        android:name="google_analytics_default_allow_ad_user_data"
+        android:value="true" />
+    <meta-data
+        android:name="google_analytics_default_allow_ad_personalization_signals"
+        android:value="true" />
+
+    <application
+        android:name=".TriviLauncher"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TriviLauncher"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".presentation.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TriviLauncher"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".data.local.notifications.service.NotificationListener"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".data.network.NetworkSpeedService"
+            android:exported="false" />
+        <receiver
+            android:name=".widget.WidgetAlarmReceiver"
+            android:exported="false" />
+        <receiver
+            android:name=".widget.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".widget.SpotlightWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="cz.appkazdarma.aiasistent.ACTION_UPDATE_WIDGET" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/spotlight_widget_info" />
+        </receiver>
+        <activity
+            android:name=".presentation.notes.NotesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TriviLauncher" />
+        <activity
+            android:name=".presentation.events.EventsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TriviLauncher" />
+        <activity
+            android:name=".presentation.tasks.TasksActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TriviLauncher" />
+        <activity
+            android:name=".presentation.placeholder.FeaturePlaceholderActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TriviLauncher" />
+        <activity
+            android:name=".presentation.gpt4all.Gpt4AllActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TriviLauncher" />
+        <activity
+            android:name=".presentation.appearance.AppearanceSettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TriviLauncher" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <!-- Default consent for Google Analytics is defined at the manifest
+             level. Remove duplicates from the application section. -->
+
+    </application>
+
+</manifest>

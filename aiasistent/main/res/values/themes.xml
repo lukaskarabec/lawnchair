@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TriviLauncher" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.TriviLauncher.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault.DayNight" />
+    <style name="Theme.TriviLauncher.AppWidgetContainer" parent="Theme.TriviLauncher.AppWidgetContainerParent" />
+</resources>

@@ -1,0 +1,73 @@
+package cz.appkazdarma.aiasistent.common
+
+import android.content.Context
+import com.google.ai.client.generativeai.type.BlockThreshold
+import com.google.ai.client.generativeai.type.HarmCategory
+import com.google.ai.client.generativeai.type.SafetySetting
+import com.google.ai.client.generativeai.type.generationConfig
+import cz.appkazdarma.aiasistent.R
+
+object Constants {
+
+    const val SYSTEM_PROMPT = """
+   Poskytněte stručnou aktualizaci přibližně ve třech větách na základě kontextu. Tato aktualizace bude na domovské obrazovce a poskytne důležité informace, upřednostněte nedávné a důležité informace. Shrňte klíčové konverzace a aktualizace, vyhněte se všedním detailům. Přihlédněte k denní době: na konci dne poskytněte souhrn a navrhněte aktivity na zítřek; na začátku dne navrhněte relevantní akce. Pokud není moc co hlásit, sdílejte zajímavá fakta nebo relevantní informace. Vyhněte se zmiňování času, data a aktuálního počasí (předpověď je v pořádku). Neptejte se na následné otázky. Použijte své osobnostní nastavení.
+
+ FORMÁT ODPOVĚDI (oddělovač: "-END-"):
+ text odpovědi-END-App1,App2,App3
+
+ Navrhněte až 3 relevantní nainstalované aplikace nebo případně žádnou. Vyhněte se irelevantním doporučením
+ nebo potenciálně rušivým aplikacím.
+"""
+
+
+//    const val DEFAULT_PROMPT = """
+//    Provide a concise update in roughly 3 sentences based on the context. This update will be on the home
+//    screen to provide important glanceable information, so prioritize recent and important information. Summarize key
+//    conversations and updates, avoiding mundane details. Consider the time of day: at the end of
+//    the day, provide a summary and suggest tomorrow's activities; at the start of the day,
+//    suggest relevant actions. If little to report, share interesting facts or relevant info.
+//    Avoid mentioning time, date, and current weather (forecast is fine). Do not ask follow-up questions.  Please use your personality setting.
+//"""
+
+    const val DEFAULT_PROMPT = """
+    Provide a concise update in roughly 3 sentences based on the context. This update will be on the home screen to provide important glanceable information, so prioritize recent and important information. Summarize key conversations and updates, avoiding mundane details. Consider the time of day: at the end of the day, provide a summary and suggest tomorrow's activities; at the start of the day, suggest relevant actions. If little to report, share interesting facts or relevant info. Avoid mentioning time, date, and current weather (forecast is fine). Do not ask follow-up questions. Please use your personality setting.
+"""
+    const val MAX_NOTIFICATION_AGE_HOURS = 12
+
+    const val MAX_WEATHER_FORECAST_ITEMS = 8
+
+    const val MAX_APP_USAGE_AGE_DAYS = 7
+
+    const val MIN_APP_USAGE_TIME_MINUTES = 1
+
+    const val MODEL_NAME = "gemini-2.5-flash-latest"
+
+    val GEMINI_CONFIG = generationConfig {
+        temperature = 0.8f
+        topK = 20
+        topP = 0.95f
+    }
+
+    private val HARASSMENT_PARAM = SafetySetting(HarmCategory.HARASSMENT, BlockThreshold.ONLY_HIGH)
+    private val HATE_SPEECH_PARAM = SafetySetting(HarmCategory.HATE_SPEECH, BlockThreshold.ONLY_HIGH)
+    private val DANGEROUS_CONTENT_PARAM = SafetySetting(HarmCategory.DANGEROUS_CONTENT, BlockThreshold.ONLY_HIGH)
+    private val SEXUALLY_EXPLICIT_PARAM = SafetySetting(HarmCategory.SEXUALLY_EXPLICIT, BlockThreshold.ONLY_HIGH)
+    val SAFETY_SETTINGS = listOf(HARASSMENT_PARAM, HATE_SPEECH_PARAM, DANGEROUS_CONTENT_PARAM, SEXUALLY_EXPLICIT_PARAM)
+
+    fun getSystemPrompt(context: Context): String {
+        return try {
+            context.getString(R.string.system_prompt)
+        } catch (e: Exception) {
+            SYSTEM_PROMPT
+        }
+    }
+
+    fun getDefaultPrompt(context: Context): String {
+        return try {
+            context.getString(R.string.default_prompt)
+        } catch (e: Exception) {
+            DEFAULT_PROMPT
+        }
+    }
+
+}

@@ -1,0 +1,44 @@
+package cz.appkazdarma.aiasistent.data.remote.dto.weather
+
+import cz.appkazdarma.aiasistent.domain.model.WeatherItem
+import cz.appkazdarma.aiasistent.domain.model.WeatherWidgetItem
+
+
+data class WeatherDto(
+    val base: String,
+    val clouds: Clouds,
+    val cod: Int,
+    val coord: Coord,
+    val dt: Int,
+    val id: Int,
+    val main: Main,
+    val name: String,
+    val rain: Rain,
+    val sys: Sys,
+    val timezone: Int,
+    val visibility: Int,
+    val weather: List<Weather>,
+    val wind: Wind
+) {
+    fun toWeatherItem() : WeatherItem {
+        // maybe add sunset and sunrise for extra context
+        return WeatherItem(
+            main = weather[0].main,
+            time = dt.toLong(),
+            description = weather[0].description,
+            temp = main.temp.toInt(),
+            feelsLike = main.feelsLike.toInt(),
+            humidity = main.humidity,
+            windSpeed = (wind.speed * 3.6).toInt(),
+            clouds = clouds.all,
+            visibility = visibility
+        )
+    }
+
+    fun toWeatherWidgetItem() : WeatherWidgetItem {
+        return WeatherWidgetItem(
+            temperature = "${main.temp.toInt()}°C",
+            iconCode = weather[0].icon
+        )
+    }
+}

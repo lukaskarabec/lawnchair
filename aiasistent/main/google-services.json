@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "403191624141",
+    "firebase_url": "https://ai-asistent-83e07-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "ai-asistent-83e07",
+    "storage_bucket": "ai-asistent-83e07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403191624141:android:bfb8740f138aaaba929484",
+        "android_client_info": {
+          "package_name": "cz.appkazdarma.aiasistent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3l3wrJS8mAB0a_AP_6q-dT29GPneH6q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
