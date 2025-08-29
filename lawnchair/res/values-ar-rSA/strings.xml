@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright 2021, Lawnchair
+  ~ Copyright 2021, مساعد منظمة العفو الدولية
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -61,7 +61,7 @@
     <string name="time_weeks_ago">%dw</string>
     <string name="time_months_ago">%dmo</string>
     <string name="time_years_ago">%dy</string>
-    <string name="managed_by_lawnchair">تتم الإدارة بواسطة Lawnchair</string>
+    <string name="managed_by_lawnchair">تتم الإدارة بواسطة مساعد منظمة العفو الدولية</string>
     <!-- When mentioning settings UI -->
     <string name="smartspace_preferences">التفضيلات</string>
     <string name="settings_button_text">إعدادات الصفحة الرئيسية</string>
@@ -69,7 +69,7 @@
     <string name="title_change_settings">تغيير الإعدادات</string>
     <!--
 
-    General "words" used throughout Lawnchair
+    General "words" used throughout مساعد منظمة العفو الدولية
 
     -->
     <string name="others_category_label">آحرون</string>
@@ -114,7 +114,7 @@
     <string name="folders_filter_duplicates">إظهار التطبيقات الفريدة فقط</string>
     <string name="my_folder_label">مجلدي</string>
     <!-- A11y description -->
-    <string name="accessibility_service_description">To perform certain actions (such as locking your phone) when performing a gesture, Lawnchair requires accessibility access.\n\nLawnchair doesn\'t watch any user action, though the privilege to do so is required for all accessibility services. Lawnchair discards any event sent by the system.\n\nIn order to lock your phone, or to open the Recents screen, Lawnchair uses the performGlobalAction Accessibility service.</string>
+    <string name="accessibility_service_description">To perform certain actions (such as locking your phone) when performing a gesture, مساعد منظمة العفو الدولية requires accessibility access.\n\nمساعد منظمة العفو الدولية doesn\'t watch any user action, though the privilege to do so is required for all accessibility services. مساعد منظمة العفو الدولية discards any event sent by the system.\n\nIn order to lock your phone, or to open the Recents screen, مساعد منظمة العفو الدولية uses the performGlobalAction Accessibility service.</string>
     <string name="x_with_y_count">%1$s (%2$d)</string>
     <string name="x_by_y">%1$d x %2$d</string>
     <string name="x_and_y">%1$s &amp; %2$s</string>
@@ -143,7 +143,7 @@
     <string name="quickstep_description">زر \"مسح الكل\"، نصف قطر الزاوية</string>
     <string name="about_label">حول التطبيق</string>
     <string name="app_info_drop_target_label">معلومات التطبيق</string>
-    <string name="debug_restart_launcher">إعادة تشغيل Lawnchair</string>
+    <string name="debug_restart_launcher">إعادة تشغيل مساعد منظمة العفو الدولية</string>
     <string name="experimental_features_label">الميزات التجريبية</string>
     <!-- Experimental features -->
     <string name="font_picker_label">تخصيص الخط</string>
@@ -171,7 +171,7 @@
     Notifications
 
     -->
-    <string name="set_default_launcher_tip">للوصول إلى الاختصارات والميزات الإضافية، عيّن Lawnchair كمشغل افتراضي</string>
+    <string name="set_default_launcher_tip">للوصول إلى الاختصارات والميزات الإضافية، عيّن مساعد منظمة العفو الدولية كمشغل افتراضي</string>
     <string name="notification_dots">نقاط الإشعارات</string>
     <string name="show_notification_count">عرض عداد الإشعارات</string>
     <string name="notification_dots_color">لون نقطة الإشعار</string>
@@ -344,7 +344,7 @@
     <string name="event_provider_missing_notification_dots">لاستخدام <xliff:g example="My Provider" id="providerName">%1$s</xliff:g>، قم بتفعيل نقاط الإشعارات.</string>
     <!-- Toggle button for enabling Smartspace -->
     <string name="smartspace_widget_toggle_label">عرض على الشاشة الرئيسية</string>
-    <string name="smartspace_widget_toggle_description">يمكنك إضافة لمحة يدوياً إلى الشاشة الرئيسية عن طريق وضع ويدجيت Lawnchair</string>
+    <string name="smartspace_widget_toggle_description">يمكنك إضافة لمحة يدوياً إلى الشاشة الرئيسية عن طريق وضع ويدجيت مساعد منظمة العفو الدولية</string>
     <!-- List of available providers -->
     <string name="smartspace_mode_label">مزود لمحة</string>
     <string name="smartspace_mode_google">جوجل</string>
@@ -415,18 +415,18 @@
     <string name="gesture_handler_open_assistant">مساعد مفتوح</string>
     <string name="pick_app_for_gesture">اختر التطبيق</string>
     <string name="dt2s_admin_hint_title">أذونات المشرف مطلوبة</string>
-    <string name="dt2s_admin_hint">لاستخدام النقرة المزدوجة لإطفاء الشاشة، عيّن Lawnchair كتطبيق مشرف للجهاز. انقر على فتح الإعدادات، ثم انقر على \"فعِّل التطبيق كمشرف على الجهاز.\"</string>
+    <string name="dt2s_admin_hint">لاستخدام النقرة المزدوجة لإطفاء الشاشة، عيّن مساعد منظمة العفو الدولية كتطبيق مشرف للجهاز. انقر على فتح الإعدادات، ثم انقر على \"فعِّل التطبيق كمشرف على الجهاز.\"</string>
     <string name="dt2s_admin_warning">سيتم إيقاف تشغيل الضغط المزدوج للسكون.</string>
     <string name="d2ts_recents_a11y_hint_title">تشغيل خدمة الوصول</string>
-    <string name="dt2s_a11y_hint">لاستخدام ميزة النقر المزدوج للسكون، قم بتفعيل خدمة الوصول الخاصة بـ Lawnchair. اضغط على \"فتح الإعدادات\"، ثم اختر \"Lawnchair\" وقم بتفعيل \"استخدام Lawnchair\". يستخدم Lawnchair طريقة performGlobalAction من خدمات الوصول لتنفيذ هذا الإجراء. هذه إذن حساس يسمح بمراقبة التطبيقات الأخرى. ومع ذلك، لم يتم تكوين Lawnchair لهذه الوظيفة ولا يستقبل أي أحداث.</string>
+    <string name="dt2s_a11y_hint">لاستخدام ميزة النقر المزدوج للسكون، قم بتفعيل خدمة الوصول الخاصة بـ مساعد منظمة العفو الدولية. اضغط على \"فتح الإعدادات\"، ثم اختر \"مساعد منظمة العفو الدولية\" وقم بتفعيل \"استخدام مساعد منظمة العفو الدولية\". يستخدم مساعد منظمة العفو الدولية طريقة performGlobalAction من خدمات الوصول لتنفيذ هذا الإجراء. هذه إذن حساس يسمح بمراقبة التطبيقات الأخرى. ومع ذلك، لم يتم تكوين مساعد منظمة العفو الدولية لهذه الوظيفة ولا يستقبل أي أحداث.</string>
     <string name="dt2s_recents_warning_open_settings">فتح الإعدادات</string>
-    <string name="recents_a11y_hint">To use Open Recents screen, turn on the Lawnchair accessibility service. Tap \"Open settings\", select \"Lawnchair\" and turn on \"Use Lawnchair.\"\n\nLawnchair uses Accessibility\'s `performGlobalAction` method to perform this action. This is a sensitive permission that allows monitoring other apps. However, Lawnchair is not configured for that functionality and receives no events.</string>
+    <string name="recents_a11y_hint">To use Open Recents screen, turn on the مساعد منظمة العفو الدولية accessibility service. Tap \"Open settings\", select \"مساعد منظمة العفو الدولية\" and turn on \"Use مساعد منظمة العفو الدولية.\"\n\nمساعد منظمة العفو الدولية uses Accessibility\'s `performGlobalAction` method to perform this action. This is a sensitive permission that allows monitoring other apps. However, مساعد منظمة العفو الدولية is not configured for that functionality and receives no events.</string>
     <!--
 
     Bug reporting
 
     -->
-    <string name="lawnchair_bug_report">تقرير خطأ Lawnchair</string>
+    <string name="lawnchair_bug_report">تقرير خطأ مساعد منظمة العفو الدولية</string>
     <string name="crash_report_notif_title">%1$s تعطل</string>
     <string name="action_upload_crash_report">تحميل سجل التعطل</string>
     <string name="action_upload_error">فشل التحميل</string>
@@ -519,7 +519,7 @@
     <!-- Search providers -->
     <string name="search_provider_app_search">بحث التطبيقات</string>
     <string name="search_provider_custom">تخصيص</string>
-    <string name="search_provider_sponsored_description">%1$s وLawnchair لديهما اتفاقية مشاركة الإيرادات.\n\nالبحث باستخدام %1$s يساعد في دعم Lawnchair.</string>
+    <string name="search_provider_sponsored_description">%1$s ومساعد منظمة العفو الدولية لديهما اتفاقية مشاركة الإيرادات.\n\nالبحث باستخدام %1$s يساعد في دعم مساعد منظمة العفو الدولية.</string>
     <string name="app_label">التطبيق</string>
     <string name="website_label">الموقع</string>
     <string name="qsb_search_provider_app_required">التطبيق مطلوب</string>
@@ -556,7 +556,7 @@
     <string name="max_folder_columns">أقصى عدد من الأعمدة في المجلد</string>
     <string name="max_folder_rows">أقصى عدد من الصفوف في المجلد</string>
     <!-- Quickstep settings -->
-    <string name="quickswitch_ignored_warning">These settings will be ignored as Lawnchair isn\'t set as the Recents screen provider</string>
+    <string name="quickswitch_ignored_warning">These settings will be ignored as مساعد منظمة العفو الدولية isn\'t set as the Recents screen provider</string>
     <string name="quickstep_incompatible">تكامل النظام غير متوافق</string>
     <string name="quickstep_incompatible_description">تم تكوين جهازك ليحتوي على إيماءات النظام (المعروفة باسم Quickstep) المقدمة بواسطة %1$s، ولكن هذا الإصدار من %1$s غير متوافق مع إصدار Android الخاص بك. لمتابعة استخدام جهازك، يرجى إلغاء تثبيت تحديثات %1$s أو تعطيل %1$s كمزود لإيماءات النظام.</string>
     <string name="translucent_background">خلفية شفافة</string>
