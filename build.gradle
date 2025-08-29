@@ -144,6 +144,8 @@ android {
         buildConfigField "String", "MAJOR_VERSION", "\"${majorVersion}\""
         buildConfigField "String", "COMMIT_HASH", "\"${buildCommit}\""
         buildConfigField "boolean", "ENABLE_AUTO_INSTALLS_LAYOUT", "false"
+        buildConfigField "String", "openWeatherKey", "\"b4c7ffeef807e25561ca4943ec34e232\""
+        buildConfigField "String", "geminiKey", "\"AIzaSyAlQgWH8rQ6bzv_HysVLWAIgDIkj7r1YKE\""
 
         manifestPlaceholders.quickstepMinSdk = quickstepMinSdk
         manifestPlaceholders.quickstepMaxSdk = quickstepMaxSdk
@@ -422,6 +424,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-kotlinx-serialization:$retrofitVersion"
     implementation "com.squareup.okhttp3:okhttp:5.1.0"
+    implementation 'com.google.ai.client:generativeai:0.9.0'
 
     def roomVersion = '2.7.2'
     implementation "androidx.room:room-runtime:$roomVersion"
